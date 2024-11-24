@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "558551914623",
+    "project_id": "grocery-boys-85b1f",
+    "storage_bucket": "grocery-boys-85b1f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558551914623:android:a39a65421ba7e8a84c074a",
+        "android_client_info": {
+          "package_name": "com.example.groceryboysproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG5nI7jRQesxQLiRZnMjK3SjrcXy7EUJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
