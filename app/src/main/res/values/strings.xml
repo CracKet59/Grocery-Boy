@@ -1,6 +1,19 @@
 <resources>
-    <string name="app_name">GroceryBoysProject</string>
-    <string name="savings" />
-    <string name="money" />
-    <string name="shopping_cart" />
+    <string name="app_name">ChatApp</string>
+    <string name="Welcome_Back">Welcome Back</string>
+    <string name="Login_to_Continue">Login to Continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="create_new_account1">Create New Account</string>
+    <string name="add_image">Add Image</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="total">Total</string>
+    <string name="shopping_cart">shoppingCart</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="Dont_have_an_account">Don\'t have an account? Sign up here!</string>
 </resources>
