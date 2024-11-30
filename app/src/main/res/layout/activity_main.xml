@@ -16,4 +16,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/buttonSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Second Activity"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="384dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
