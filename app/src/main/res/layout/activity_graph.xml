@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_graph"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".activities.GraphActivity">
+
+
+
+
+<!--Ui component for our bar chart-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+
+        <ViewSwitcher
+            android:id="@+id/simpleViewSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="650dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/idBarChart"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="75dp"
+                    android:layout_height="match_parent"
+                    android:textSize="34sp" />
+
+                <ImageView
+                    android:id="@+id/Edit"
+                    android:layout_width="87dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="right"
+                    app:srcCompat="@drawable/baseline_edit_24" />
+
+                <ImageView
+                    android:id="@+id/LockUnlock"
+                    android:layout_width="87dp"
+                    android:layout_height="75dp"
+                    app:srcCompat="@drawable/baseline_lock_24" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textRowZero"
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:text="Columns: #"
+                        android:textSize="40sp"
+                        android:textStyle="" />
+
+                    <View
+                        android:layout_width="352dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="75dp"
+                        android:background="#A9A9A9" />
+
+
+                    <TextView
+                        android:id="@+id/textRowOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="■ Essentials"
+                        android:textSize="40sp"
+                        android:textStyle="" />
+
+                    <View
+                        android:id="@+id/lineOne"
+                        android:layout_width="352dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="#A9A9A9" />
+
+                    <TextView
+                        android:id="@+id/textRowTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="■ Home"
+                        android:textSize="40sp"
+                        android:textStyle="" />
+
+                    <View
+                        android:id="@+id/lineTwo"
+                        android:layout_width="352dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="#A9A9A9" />
+
+                    <TextView
+                        android:id="@+id/textRowThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="■ Meats"
+                        android:textSize="40sp"
+                        android:textStyle="" />
+
+                    <View
+                        android:id="@+id/lineThree"
+                        android:layout_width="352dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="#A9A9A9" />
+
+                    <TextView
+                        android:id="@+id/textRowFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="■ Cleaning"
+                        android:textSize="40sp"
+                        android:textStyle="" />
+
+                    <View
+                        android:id="@+id/lineFour"
+                        android:layout_width="352dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="#A9A9A9" />
+
+                    <TextView
+                        android:id="@+id/textRowFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="■ Frozen"
+                        android:textSize="40sp"
+                        android:textStyle=""
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/lineFive"
+                        android:layout_width="352dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="#A9A9A9"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textRowSix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="□ Snacks"
+                        android:textSize="40sp"
+                        android:textStyle=""
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/lineSix"
+                        android:layout_width="352dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:background="#A9A9A9"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewCreate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="40sp"
+                            android:text="Create Row"
+                            android:textColor="#0099ff" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="143dp"
+                            android:layout_height="16dp"
+                            android:layout_weight="1" />
+
+
+                        <TextView
+                            android:id="@+id/textViewDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="40sp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Delete Row"
+                            android:textColor="#0099ff" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/clear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+                <ImageView
+                    android:id="@+id/clear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+                <ImageView
+                    android:id="@+id/clear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+                <NumberPicker
+                    android:id="@+id/picker1"
+                    android:layout_width="194dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/Edit2"
+                    android:layout_width="87dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="right"
+                    app:srcCompat="@drawable/baseline_insert_chart_outlined_24" />
+
+
+            </FrameLayout>
+
+
+        </ViewSwitcher>
+
+        <TextView
+            android:id="@+id/midText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
