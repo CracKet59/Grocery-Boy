@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cart Menu Item -->
+    <item
+        android:id="@+id/nav_cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="@string/shopping_cart" />
+
+    <!-- Savings Menu Item -->
+    <item
+        android:id="@+id/nav_savings"
+        android:icon="@drawable/ic_saving_money"
+        android:title="@string/savings" />
+
+    <!-- Money Menu Item -->
+    <item
+        android:id="@+id/nav_money"
+        android:icon="@drawable/ic_money"
+        android:title="@string/money" />
+</menu>
