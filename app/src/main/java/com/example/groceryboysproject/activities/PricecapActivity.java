@@ -128,7 +128,7 @@ public class PricecapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Intent to switch to SecondActivity
-                Intent intent = new Intent(PricecapActivity.this, MainActivity.class);
+                Intent intent = new Intent(PricecapActivity.this, ShoppingCart.class);
                 startActivity(intent);
             }
         });

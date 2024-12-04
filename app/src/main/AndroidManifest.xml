@@ -21,6 +21,17 @@
             android:name=".activities.SignInActivity"
             android:exported="false" />
         <activity
+            android:name=".activities.PricecapActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".activities.ShoppingCart"
+            android:exported="false"/>
+
+
+        <activity
+            android:name=".activities.GraphActivity"
+            android:exported="false"/>
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -29,13 +40,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.PricecapActivity"
-            android:exported="false"/>
 
-         <activity
-            android:name=".activities.GraphActivity"
-            android:exported="false"/>
 
         <service
             android:name=".firebase.MessagingService"

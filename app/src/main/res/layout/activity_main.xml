@@ -7,25 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-
-
-
-    <!-- Top Bar -->
+    <!-- Top layout for settings, profile icon, and title -->
     <RelativeLayout
-        android:id="@+id/top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@android:color/white"
-        android:padding="8dp">
+        android:id="@+id/top_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
 
         <!-- Settings Icon -->
+
+
+        <!-- Profile Icon for User Image -->
         <ImageView
             android:id="@+id/settings_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentStart="true"
-            android:src="@drawable/ic_settings"
-            />
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_settings" />
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_profile"
+            android:scaleType="centerCrop"
+            android:background="?attr/selectableItemBackgroundBorderless" />
 
         <!-- Title Text -->
         <TextView
@@ -33,80 +45,112 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Total"
+            android:text="@string/total"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black" />
+            android:textColor="#333333" />
+    </RelativeLayout>
+    <!-- Header layout for Icon, Item, Qty, and Price -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/top_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- Icon Header -->
+        <TextView
+            android:id="@+id/icon_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Item"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
 
-        <!-- Profile Icon -->
-        <ImageView
-            android:id="@+id/profile_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+        <!-- Item Header -->
+        <TextView
+            android:id="@+id/item_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/icon_header"
+            android:layout_marginStart="30dp"
+            android:text="Description"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+        <!-- Price Header -->
+        <TextView
+            android:id="@+id/price_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_profile"
-            />
+            android:text="Price"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
     </RelativeLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Grocery  world"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!-- RecyclerView to display shopping items -->
+    <!-- Bottom layout for lower icons -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shopping_items_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <!-- Bottom Navigation with Icons -->
-    <LinearLayout
-        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_shopping" />
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="2dp"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <!-- Your Bottom Navigation content here -->
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
 
         <!-- Shopping Cart Icon -->
         <ImageView
             android:id="@+id/cartSwitch"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/shopping_cart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
             android:src="@drawable/ic_shopping_cart" />
 
-        <!-- Separator Line -->
-        <View
 
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/darker_gray" />
-
-        <!-- Savings Icon -->
-        <ImageView
-            android:id="@+id/graphSwitch"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:src="@drawable/baseline_insert_chart_outlined_24" />
-
-        <!-- Separator Line -->
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/darker_gray" />
-
-        <!-- Money Icon -->
+        <!-- Money Symbol Icon -->
         <ImageView
             android:id="@+id/capSwitch"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
             android:src="@drawable/ic_money" />
-    </LinearLayout>
+
+        <!-- Saving Money Icon -->
+        <ImageView
+            android:id="@+id/graphSwitch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/baseline_insert_chart_outlined_24" />
+    </RelativeLayout>
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonSwitch"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Go to Second Activity"-->
+    <!--        tools:layout_editor_absoluteX="113dp"-->
+    <!--        tools:layout_editor_absoluteY="384dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/shoppingCart"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
@@ -144,7 +144,7 @@
 
         <!-- Shopping Cart Icon -->
         <ImageView
-            android:id="@+id/shoppingCart"
+            android:id="@+id/cartSwitch"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
@@ -153,7 +153,7 @@
 
         <!-- Money Symbol Icon -->
         <ImageView
-            android:id="@+id/moneySymbol"
+            android:id="@+id/capSwitch"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
@@ -162,11 +162,11 @@
 
         <!-- Saving Money Icon -->
         <ImageView
-            android:id="@+id/savingMoney"
+            android:id="@+id/graphSwitch"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_saving_money" />
+            android:src="@drawable/baseline_insert_chart_outlined_24" />
     </RelativeLayout>
 
 

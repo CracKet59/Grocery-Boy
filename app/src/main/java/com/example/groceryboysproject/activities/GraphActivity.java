@@ -794,7 +794,7 @@ public class GraphActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Intent to switch to SecondActivity
-                Intent intent = new Intent(GraphActivity.this, MainActivity.class);
+                Intent intent = new Intent(GraphActivity.this, ShoppingCart.class);
                 startActivity(intent);
             }
         });
