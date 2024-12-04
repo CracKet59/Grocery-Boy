@@ -2,25 +2,26 @@ package com.example.groceryboysproject.activities;
 
 
 // Import the libraries
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.core.graphics.Insets;
-        import androidx.core.view.ViewCompat;
-        import androidx.core.view.WindowInsetsCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.ImageView;
-        import android.widget.SeekBar;
-        import android.widget.TextView;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
-        import com.example.groceryboysproject.R;
+import com.example.groceryboysproject.R;
 
 public class PricecapActivity extends AppCompatActivity {
 
     // Define the global variable
     SeekBar seekbar;
     TextView Text_message;
+    ImageView Text_dollar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -32,6 +33,8 @@ public class PricecapActivity extends AppCompatActivity {
 
         // use findViewById() to get the Button
         Text_message = (TextView)findViewById(R.id.message_id);
+        Text_dollar = (ImageView)findViewById(R.id.message_dollar);
+
         seekbar = (SeekBar)findViewById(R.id.seekbar);
 
         // Get the progress value of the SeekBar
@@ -50,11 +53,23 @@ public class PricecapActivity extends AppCompatActivity {
                             {
 
                                 // increment 1 in progress and
-                                // increase the textsize
+                                // increase the value
                                 // with the value of progress
                                 String myPriceCap= "Price Cap: $";
-                                myPriceCap = myPriceCap + progress;
+                                myPriceCap = "$" + progress;
                                 Text_message.setText(myPriceCap);
+
+                                // make dollar in back get beeg
+                                // increase the textsize
+                                // with the value of progress
+                                //Text_dollar.(progress + 500);
+
+                                // Calculate the scale factor based on the slider's progress
+                                float scaleFactor = 1 + (progress / 1000f);  // Scale between 1 and 2
+
+                                // Apply scaling to the ImageView
+                                Text_dollar.setScaleX(scaleFactor);
+                                Text_dollar.setScaleY(scaleFactor);
                             }
 
                             @Override
@@ -128,7 +143,7 @@ public class PricecapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Intent to switch to SecondActivity
-                Intent intent = new Intent(PricecapActivity.this, ShoppingCart.class);
+                Intent intent = new Intent(PricecapActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

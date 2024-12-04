@@ -297,8 +297,8 @@ tools:context=".activities.GraphActivity">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
-            android:textSize="24sp" />
-
+            android:textSize="0sp" />
+    </LinearLayout>
         <!-- Bottom Navigation with Icons -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -348,7 +348,7 @@ tools:context=".activities.GraphActivity">
                 android:layout_weight="1"
                 android:src="@drawable/ic_money" />
         </LinearLayout>
-    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

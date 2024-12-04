@@ -18,124 +18,168 @@
         tools:layout_editor_absoluteY="1dp">
 
 
-        <!-- Top Bar -->
-        <RelativeLayout
-            android:id="@+id/top_bar"
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="@android:color/white"
-            android:padding="8dp">
+            android:layout_height="match_parent">
 
-            <!-- Settings Icon -->
             <ImageView
-                android:id="@+id/settings_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentStart="true"
-                android:src="@drawable/ic_settings"
-                />
+                android:id="@+id/message_dollar"
 
-            <!-- Title Text -->
-            <TextView
-                android:id="@+id/title_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="Total"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black" />
-
-            <!-- Profile Icon -->
-            <ImageView
-                android:id="@+id/profile_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_profile"
-                />
-        </RelativeLayout>
+                android:layout_width="7000dp"
 
 
-        <TextView
-            android:id="@+id/message_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Price Cap: 0"
-            android:layout_marginTop="200dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="138dp"
-            tools:layout_editor_absoluteY="232dp" />
+                android:layout_height="900dp"
 
-        <SeekBar
-            android:id="@+id/seekbar"
-            android:layout_width="300dp"
-            android:layout_marginTop="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:max="200"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="531dp" />
+                android:layout_marginStart="50px"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_attach_money_24"
 
+                android:textStyle="bold" />
 
-
-
-        <!-- Spacer to push the bottom navigation to the bottom -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-
-        <!-- Bottom Navigation with Icons -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="2dp">
-            <!-- Your Bottom Navigation content here -->
-
-            <!-- Shopping Cart Icon -->
-            <ImageView
-                android:id="@+id/cartSwitch"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:contentDescription="@string/shopping_cart"
-                android:src="@drawable/ic_shopping_cart" />
-
-            <!-- Separator Line -->
-            <View
-
-                android:layout_width="1dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/darker_gray" />
+                android:orientation="vertical">
 
-            <!-- Savings Icon -->
-            <ImageView
-                android:id="@+id/graphSwitch"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/baseline_insert_chart_outlined_24" />
 
-            <!-- Separator Line -->
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/darker_gray" />
 
-            <!-- Money Icon -->
-            <ImageView
-                android:id="@+id/capSwitch"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/ic_money" />
-        </LinearLayout>
+                <!-- Top Bar -->
+                <RelativeLayout
+                    android:id="@+id/top_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/white"
+                    android:padding="8dp">
+
+                    <!-- Settings Icon -->
+                    <ImageView
+                        android:id="@+id/settings_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_settings"
+                        />
+
+                    <!-- Title Text -->
+                    <TextView
+                        android:id="@+id/title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Total"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+
+                    <!-- Profile Icon -->
+                    <ImageView
+                        android:id="@+id/profile_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_profile"
+                        />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/message_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Price Cap:"
+                    android:layout_marginTop="100dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="138dp"
+                    tools:layout_editor_absoluteY="232dp" />
+                <TextView
+                    android:id="@+id/message_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:layout_marginTop="20dp"
+                    android:textSize="160sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="138dp"
+                    tools:layout_editor_absoluteY="232dp" />
+
+
+                <!-- Spacer to push the bottom navigation to the bottom -->
+
+
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="80dp"
+                    android:max="200"
+                    tools:layout_editor_absoluteX="32dp"
+                    tools:layout_editor_absoluteY="531dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <!-- Bottom Navigation with Icons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="2dp">
+                    <!-- Your Bottom Navigation content here -->
+
+                    <!-- Shopping Cart Icon -->
+                    <ImageView
+                        android:id="@+id/cartSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/shopping_cart"
+                        android:src="@drawable/ic_shopping_cart" />
+
+                    <!-- Separator Line -->
+                    <View
+
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- Savings Icon -->
+                    <ImageView
+                        android:id="@+id/graphSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_insert_chart_outlined_24" />
+
+                    <!-- Separator Line -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray" />
+
+                    <!-- Money Icon -->
+                    <ImageView
+                        android:id="@+id/capSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_money" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+
 
 
     </LinearLayout>
