@@ -12,14 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GroceryBoysProject"
         tools:targetApi="31">
-        <activity
-            android:name=".activities.SignUpActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activities.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class DashboardActivity extends AppCompatActivity {
 
+    /**
     private FirebaseAuth auth;
     private TextView welcomeTextView;
 
@@ -36,7 +37,7 @@ public class DashboardActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No user signed in", Toast.LENGTH_SHORT).show();
         }
-/*
+/**
         // Set up Bottom Navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_bar);
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
@@ -57,7 +58,6 @@ public class DashboardActivity extends AppCompatActivity {
                     return false;
             }
         });
-        */
 
-    }
+    }**/
 }
