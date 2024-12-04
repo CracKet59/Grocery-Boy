@@ -10,6 +10,4 @@
     <color name="error">#B00020</color>
     <color name="received_message_background">#090D16</color>
     <color name="green">#008000</color>
-    <color name="item_background_color">#F5F5DC</color> <!-- Light Beige -->
-
 </resources>

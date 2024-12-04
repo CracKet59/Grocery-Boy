@@ -2,6 +2,8 @@ package com.example.groceryboysproject.activities;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
+
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -12,7 +14,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
 import androidx.core.text.HtmlCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import android.widget.NumberPicker;
 
 import com.example.groceryboysproject.R;
@@ -91,6 +97,11 @@ public class GraphActivity extends AppCompatActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
         TextView textViewCreate = findViewById(R.id.textViewCreate);
@@ -729,6 +740,64 @@ public class GraphActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+        //  code to switch to graph
+        ImageView graphSwitch = findViewById(R.id.graphSwitch);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_graph), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        graphSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to switch to SecondActivity
+                Intent intent = new Intent(GraphActivity.this, GraphActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        // code to switch to graph cap
+        ImageView capSwitch = findViewById(R.id.capSwitch);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_graph), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        capSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to switch to SecondActivity
+                Intent intent = new Intent(GraphActivity.this, PricecapActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // code to switch to cart
+        ImageView cartSwitch = findViewById(R.id.cartSwitch);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_graph), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        cartSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to switch to SecondActivity
+                Intent intent = new Intent(GraphActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     } //END OF ON CREATE
 
     /**
@@ -863,6 +932,20 @@ public class GraphActivity extends AppCompatActivity {
         if (numOfSets >= 6) {
             barDataSet6.setColor(Color.parseColor("#CC6CE7"));
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
